@@ -7,9 +7,8 @@ function maxProfit(prices: number[]): number {
   let maxProfit = 0;
 
   for (let i = 1; i < prices.length; i++) {
-    // 만약 오늘 가격이 어제 가격보다 비싸면
+    // 현재 가격과 이전 가격 비교
     if (prices[i] > prices[i - 1]) {
-      // 오늘 가격에서 어제 가격을 뺀 만큼 이익을 더한다
       maxProfit += prices[i] - prices[i - 1];
     }
   }
