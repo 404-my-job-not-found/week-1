@@ -8,23 +8,6 @@ Consider the number of unique elements of nums to be k, to get accepted, you nee
 
 Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
 Return k.
-Custom Judge:
-
-The judge will test your solution with the following code:
-
-```
-int[] nums = [...]; // Input array
-int[] expectedNums = [...]; // The expected answer with correct length
-
-int k = removeDuplicates(nums); // Calls your implementation
-
-assert k == expectedNums.length;
-for (int i = 0; i < k; i++) {
-    assert nums[i] == expectedNums[i];
-}
-```
-
-If all assertions pass, then your solution will be accepted.
 
 Constraints:
 
@@ -41,9 +24,13 @@ nums의 고유 요소 수를 k라고 가정하면 다음과 같은 작업을 수
 nums의 첫 번째 k 요소에 처음에 nums에 있던 순서대로 고유 요소가 포함되도록 배열 nums를 변경합니다. nums의 나머지 요소는 nums의 크기만큼 중요하지 않습니다.
 k를 반환합니다.
 
-사용자 지정 심사위원:
+제약 조건:
 
-심사위원은 다음 코드를 사용하여 솔루션을 테스트합니다:
+- 1 <= nums.length <= 3 \* 104
+- -100 <= nums[i] <= 100
+- nums는 내림차순이 아닌 순서로 정렬됩니다.
+
+## Example
 
 ```
 int[] nums = [...]; // Input array
@@ -56,14 +43,6 @@ for (int i = 0; i < k; i++) {
     assert nums[i] == expectedNums[i];
 }
 ```
-
-모든 어설션이 통과되면 솔루션이 수락됩니다.
-
-제약 조건:
-
-- 1 <= nums.length <= 3 \* 104
-- -100 <= nums[i] <= 100
-- nums는 내림차순이 아닌 순서로 정렬됩니다.
 
 ## 의식의 흐름
 
