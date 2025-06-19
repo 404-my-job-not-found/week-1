@@ -17,3 +17,4 @@ const nums3 = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
 containsDuplicate(nums);
 containsDuplicate(nums2);
 containsDuplicate(nums3);
+//??
