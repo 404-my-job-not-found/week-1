@@ -6,3 +6,7 @@
 
 ✨ 우리 모두가 서로의 성장의 증인이 되어줄 거예요.
 이번 주도 화이팅입니다! 🙌
+
+---
+📖 **미디엄 추가 문제**  
+[Find if Array Can Be Sorted](https://leetcode.com/problems/find-if-array-can-be-sorted/description/?envType=problem-list-v2&envId=array)
