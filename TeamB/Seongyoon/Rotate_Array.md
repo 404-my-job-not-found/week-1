@@ -4,7 +4,7 @@
 
 Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
 
-## 해석
+## 번역
 
 정수 배열 n이 주어지면 배열을 오른쪽으로 k 단계씩 회전합니다(여기서 k는 음수가 아닌 값).
 
