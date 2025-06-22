@@ -13,4 +13,8 @@ var removeDuplicates = function (nums) {
     return uniqueIndex + 1;
 };
 
-console.log(removeDuplicates([0, 0, 1, 1, 2]));
+const nums = [0, 0, 1, 2];
+const k = removeDuplicates(nums);
+console.log(k);
+
+console.log(nums.slice(0, k));
