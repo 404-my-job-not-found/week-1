@@ -1,0 +1,17 @@
+name: Auto Assign PR Author
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  auto-assign:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Add PR Assignees
+        uses: hkusu/review-assign-action@v1
+        with:
+          assignees: ${{ github.actor }}
