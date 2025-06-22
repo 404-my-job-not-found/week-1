@@ -10,15 +10,8 @@ var maxProfit = function (prices) {
     for (let i = 0; i < prices.length; i++) {
         // 이때 매수를 해야 됨. 다음 날보다 저점이라서.
         if (prices[i] < prices[i + 1]) {
-            buy = prices[i];
-            console.log("매수" + i + ": ", buy);
-        }
-        // 이때 매도를 해야 됨. 다음 날보다 고점이라서.
-        if (prices[i] > prices[i + 1] && buy !== 0) {
-            sell = prices[i] - buy;
-            profit += sell;
-            buy = 0;
-            console.log("매도" + i + ": ", sell);
+            profit += prices[i + 1] - prices[i];
+            console.log("이익" + i + ": ", prices[i + 1] - prices[i]);
         }
     }
     return profit;
