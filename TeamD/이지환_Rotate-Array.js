@@ -4,20 +4,26 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var rotate = function (nums, k) {
-    let length = nums.length;
-    let rotate = [];
-    // 회전 범위를 맞춤
-    k = k % length;
-    for (let i = 0; i < length; i++) {
-        // 배열 회전 시킨 후에 어디로 가야하는지 찾음
-        let index = (i + k) % length;
-        rotate[index] = nums[i];
-    }
-    return rotate;
+    const n = nums.length;
+    k = k % n; // 회전 범위 조절
+
+    reverse(nums, 0, n - 1); // 전체 배열 뒤집기
+    reverse(nums, 0, k - 1); // 앞쪽 부분 뒤집기
+    reverse(nums, k, n - 1); // 뒤쪽 부분 뒤집기
 };
+
+function reverse(nums, start, end) {
+    while (start < end) {
+        const temp = nums[start];
+        nums[start] = nums[end];
+        nums[end] = temp;
+        start++;
+        end--;
+    }
+}
 
 const nums = [1, 2, 3, 4, 5, 6, 7];
 const k = 3;
 
-let result = rotate(nums, k);
-console.log("result: ", result);
+rotate(nums, k);
+console.log("nums: ", nums);
